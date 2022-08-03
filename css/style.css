@@ -1,0 +1,766 @@
+@charset "UTF-8";
+/* NINE DEVELOPERS 기본 CSS */
+
+
+/* 기본 BODY 세팅 (2017.2.18) */
+/*body,td,th {
+	color: #222222;
+	background-color: #FFFFFF;
+	text-align: center;
+	font-family: "SF Display", "Noto Sans";
+	font-weight: 400;
+}*/
+body,td,th {
+	color: #FFFFFF;
+	background-color: #222222;
+	text-align: center;
+	font-family: "SF Display", "Noto Sans";
+	font-weight: 400;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	min-height: 100%;
+}
+
+@media (prefers-color-scheme: dark),(prefers-color-scheme: light),(prefers-color-scheme: no-preference)
+{
+	body,td,th {
+		color: #FFFFFF;
+		background-color: #222222;
+		text-align: center;
+		font-family: "SF Display", "Noto Sans";
+		font-weight: 400;
+	}
+}
+
+table {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div{
+	padding: 15px;
+	align-content: center;
+}
+
+td, th {
+	padding: 5px;
+	align-content: center;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-family: "SF Display", "Noto Sans";
+	font-weight: 500;
+	margin: 15px;
+}
+
+img {
+	max-width: 90%;
+	height: auto;
+}
+
+/* 폰트 불러오기 (2017.02.18) */
+
+/* Noto Sans (2017.02.18) */
+@font-face {
+    font-family: 'Noto Sans';
+    font-style: thin;
+    font-weight: 100;
+    src: local('Noto Sans Thin'), local('NotoSans-Thin'),
+    url("/fonts/Noto Sans/woff/NotoSansKR-Thin-Hestia.woff") format('woff'),
+    url("/fonts/Noto Sans/otf/NotoSansKR-Thin-Hestia.otf") format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans';
+    font-style: light;
+    font-weight: 300;
+    src: local('Noto Sans Light'), local('NotoSans-Light'),
+    url("/fonts/Noto Sans/woff/NotoSansKR-Light-Hestia.woff") format('woff'),
+    url("/fonts/Noto Sans/otf/NotoSansKR-Light-Hestia.otf") format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans';
+    font-style: demilight;
+    font-weight: 350;
+    src: local('Noto Sans DemiLight'), local('NotoSans-DemiLight'),
+    url("/fonts/Noto Sans/woff/NotoSansKR-DemiLight-Hestia.woff") format('woff'),
+    url("/fonts/Noto Sans/otf/NotoSansKR-DemiLight-Hestia.otf") format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans';
+    font-style: regular;
+    font-weight: 400;
+    src: local('Noto Sans Regular'), local('NotoSans-Regular'),
+    url("/fonts/Noto Sans/woff/NotoSansKR-Regular-Hestia.woff") format('woff'),
+    url("/fonts/Noto Sans/otf/NotoSansKR-Regular-Hestia.otf") format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans';
+    font-style: medium;
+    font-weight: 500;
+    src: local('Noto Sans Medium'), local('NotoSans-Medium'),
+    url("/fonts/Noto Sans/woff/NotoSansKR-Medium-Hestia.woff") format('woff'),
+    url("/fonts/Noto Sans/otf/NotoSansKR-Medium-Hestia.otf") format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans';
+    font-style: bold;
+    font-weight: 700;
+    src: local('Noto Sans Bold'), local('NotoSans-Bold'),
+    url("/fonts/Noto Sans/woff/NotoSansKR-Bold-Hestia.woff") format('woff'),
+    url("/fonts/Noto Sans/otf/NotoSansKR-Bold-Hestia.otf") format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans';
+    font-style: black;
+    font-weight: 900;
+    src: local('Noto Sans Black'), local('NotoSans-Black'),
+    url("/fonts/Noto Sans/woff/NotoSansKR-Black-Hestia.woff") format('woff'),
+    url("/fonts/Noto Sans/otf/NotoSansKR-Black-Hestia.otf") format('opentype');
+}
+
+/* NanumSquare (2017.2.18) */
+@font-face {
+  font-family: 'Nanum Square';
+  font-style: regular;
+  font-weight: 400;
+  src: local('Nanum Square Regular'), local('NanumSquareR'),
+       url("/fonts/Nanum Square/woff2/NanumSquareR.woff2") format('woff2'),
+       url("/fonts/Nanum Square/ttf/NanumSquareR.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: 'Nanum Square';
+  font-style: bold;
+  font-weight: 700;
+  src: local('Nanum Square Bold'), local('NanumSquareB'),
+       url("/fonts/Nanum Square/woff2/NanumSquareB.woff2") format('woff2'),
+       url("/fonts/Nanum Square/ttf/NanumSquareB.ttf") format('truetype');
+}
+
+@font-face {
+	font-family: 'Nanum Square Round';
+	font-style: bold;
+	font-weight: bold;
+	src: local('Nanum Square Round'), local('NanumSquareRoundB'),
+		 url("/fonts/Nanum Square/woff2/NanumSquareRoundEB.woff2") format('woff2'),
+		 url("/fonts/Nanum Square/ttf/NanumSquareRoundEB.ttf") format('truetype');
+}
+
+/* SF */
+
+/** Black */
+/*
+@font-face {
+  font-family: "SF Display";
+  font-weight: 900;
+  src: url("/fonts/SF/otf/SF-UI-Display-Black.otf");
+}
+*/
+
+/** Bold */
+@font-face {
+  font-family: "SF Display";
+  font-weight: 700;
+  src: url("/fonts/SF/otf/SF-UI-Display-Bold.otf");
+}
+
+/** Heavy */
+/*
+@font-face {
+  font-family: "SF Display";
+  font-weight: 800;
+  src: url("/fonts/SF/otf/SF-UI-Display-Heavy.otf");
+}
+*/
+
+/** Light */
+@font-face {
+  font-family: "SF Display";
+  font-weight: 200;
+  src: url("/fonts/SF/otf/SF-UI-Display-Light.otf");
+}
+
+/** Medium */
+@font-face {
+  font-family: "SF Display";
+  font-weight: 500;
+  src: url("/fonts/SF/otf/SF-UI-Display-Medium.otf");
+}
+
+/** Regular */
+@font-face {
+  font-family: "SF Display";
+  font-weight: 400;
+  src: url("/fonts/SF/otf/SF-UI-Display-Regular.otf");
+}
+
+/** Semibold */
+@font-face {
+  font-family: "SF Display";
+  font-weight: 600;
+  src: url("/fonts/SF/otf/SF-UI-Display-Semibold.otf");
+}
+
+/** Thin */
+@font-face {
+  font-family: "SF Display";
+  font-weight: 300;
+  src: url("/fonts/SF/otf/SF-UI-Display-Thin.otf");
+}
+
+/** Ultralight */
+/*
+@font-face {
+  font-family: "SF Display";
+  font-weight: 100;
+  src: url("/fonts/SF/otf/SF-UI-Display-Ultralight.otf");
+}
+*/
+
+/* UNDERLINE / DOT 제거 (2017.2.18) */
+a:link {color:inherit; text-decoration:none;}
+a:visited {color:inherit; text-decoration:none;}
+a:active {color:inherit; text-decoration:none;}
+a:hover {color: #D5D5D5; text-decoration: none;}
+
+li {
+	list-style: none;
+}
+
+/* HEADER (2017.2.18) */
+@media all and (max-width: 768px) {
+	header {
+		width: 100%;
+		margin: 0;
+		position: fixed;
+		box-shadow: 0 0px 25px rgba(0, 0, 0, .8);
+		webkit-box-shadow: 0 0px 25px rgba(0, 0, 0, .8);
+		z-index: 1000;
+	}
+	
+	.header-bar {
+		margin: 0px;
+		padding: 15px;
+		height: 53px;
+		background-color: #111111;
+	}
+
+	.menu-list-mobile {
+		color: #FFFFFF;
+		background-color: #111111;
+		font-family: Nanum Square;
+		font-weight: 700;
+		max-width: 500px;
+		margin: 13px 0px 0px 0px !important;
+		padding: 0px;
+		border-radius: 0px 0px 15px 15px;
+		box-shadow: 0 0px 50px rgba(0, 0, 0, .8);
+		webkit-box-shadow: 0 0px 50px rgba(0, 0, 0, .8);
+	}
+	
+	.menu-list-desktop {
+		display: none;
+	}
+
+	.header-menu-list {
+		padding: 5px;
+	}
+}
+
+@media all and (min-width: 768px) {
+	header {
+		width: 100%;
+		margin: 0px;
+		position: fixed;
+		text-align: left;
+		box-shadow: 0 0px 25px rgba(0, 0, 0, .8);
+		webkit-box-shadow: 0 0px 25px rgba(0, 0, 0, .8);
+		z-index: 1000;
+	}
+	
+	.header-bar {
+		margin: 0px;
+		height: auto;
+		vertical-align: middle;
+		background-color: #111111;
+	}
+	
+	.header-menu-button {
+		display: none;
+	}
+
+	.menu-list-mobile {
+		display: none !important;
+	}
+	
+	.menu-list-desktop {
+		color: #FFFFFF;
+		font-family: Nanum Square;
+		font-weight: 700;
+		max-width: 500px;
+		margin: 0px 0px 0px 20px;
+		padding: 0px;
+		display: inline-block;
+	}
+	
+	.menu-list-desktop li {
+		margin: 0px;
+		padding: 15px;
+		display: inline;
+	}
+
+	.header-menu-list {
+		padding: 5px;
+	}
+}
+
+/* CLOUDIX-HEADER (2020.2.10) */
+.cloudix-main-header-bar {
+	margin: 0px;
+	padding: 15px;
+	height: 53px;
+	background: linear-gradient(135deg,  rgb(246,139,255) 0%, rgb(113,194,255) 100%);
+}
+
+.cloudix-sub-header-bar {
+	margin: auto;
+	text-align: left;
+	padding: auto;
+	height: 33px;
+	background: #FFFFFF;
+	color: #111111;
+}
+
+.cloudix-menu-list {
+	color: #FFFFFF;
+	background-color: #111111;
+	font-family: Nanum Square;
+	font-weight: 700;
+	max-width: 500px;
+	margin: 13px 0px 0px 0px !important;
+	padding: 0px;
+	border-radius: 0px 0px 15px 15px;
+	box-shadow: 0 0px 50px rgba(0, 0, 0, .8);
+	webkit-box-shadow: 0 0px 50px rgba(0, 0, 0, .8);
+}
+
+/*
+@media (prefers-color-scheme: dark) 
+{
+	header {
+		filter: invert(100%);
+	}
+}
+*/
+
+/* FOOTER (2017.2.18) */
+footer {
+	height: auto;
+	font-family: Nanum Square;
+	font-weight: 400;
+	background-color: #111111;
+	text-align: center;
+}
+
+.footer-menu {
+	font-weight: 700;
+	color: #FFFFFF;
+}
+
+.footer-info {
+	color: #BDBDBD;
+	font-size: 12px;
+}
+
+.footer-copyright {
+	font-size: 11px;
+	color: #8C8C8C;
+}
+
+/* LAYOUT (2020.03.15) */
+.header-section-filler {
+	height: 55px;
+	margin: 0px;
+}
+
+/* SUB/TITLE (2017.2.19) */
+.topic-title {
+	width: 100%;
+	height: auto;
+	font-weight: 700;
+	font-size: 30px;
+	font-family: Nanum Square;
+	text-align: left;
+	padding: 60px 20px 0px 20px;
+}
+
+.topic-h4 {
+	text-align: left;
+}
+
+/* LOGIN&OUT (2020.1.28) */
+#login_title {
+	text-align: left;
+	background: -webkit-linear-gradient(135deg,  rgb(246,139,255) 0%, rgb(113,194,255) 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+#login-form {
+	height: auto;
+	color: #111111;
+	background: linear-gradient(135deg,  rgb(246,139,255) 0%, rgb(113,194,255) 100%);
+}
+
+.login-form-input{
+	color: #FFFFFF;
+	vertical-align: middle;
+	background: #111111;
+	height: 27px;
+	width: 100px;
+	border-width: 2px;
+	border-color: #333333;
+	border-radius: 5px;
+	padding-left: 10px;
+	margin: 3px 0px 3px 3px;
+}
+
+.login-banner {
+	height: auto;
+	color: #111111;
+	background: linear-gradient(135deg,  rgb(246,139,255) 0%, rgb(113,194,255) 100%);
+}
+
+/* BUTTONS (2017.2.18) */
+.black-button {
+	background-color: #111111;
+	height: auto;
+	width: auto;
+	font-weight: 400;
+	font-size: 15px;
+	color: #FFFFFF;
+	border-radius: 20px;
+	margin: 3px;
+	margin-top: 15px;
+	padding: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	border: none;
+}
+.black-button:hover {
+	background-color: #000000;
+}
+
+.white-button {
+	background-color: #FFFFFF;
+	height: auto;
+	width: auto;
+	font-weight: 400;
+	font-size: 15px;
+	color: #222222;
+	border-radius: 20px;
+	margin: 3px;
+	margin-top: 15px;
+	padding: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	border: none;
+}
+
+.white-button:hover {
+	background-color: #E0E0E0;
+}
+
+.red-button {
+	background-color: #FF0000;
+	height: auto;
+	width: auto;
+	font-weight: 400;
+	font-size: 15px;
+	color: #FFFFFF;
+	border-radius: 20px;
+	margin: 3px;
+	margin-top: 15px;
+	padding: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	border: none;
+}
+
+.red-button:hover {
+	background-color: #B6080B;
+}
+
+/* BANNER (2017.2.18) */
+@media all and (max-width: 768px) {
+	.index-banner-category {
+		width: 100%;
+		padding: 0px;
+	}
+}
+
+@media all and (min-width: 768px) {
+	.index-banner-category {
+		width: 45%;
+		padding: 0px;
+		margin: 0px;
+		display: inline-table;
+	}
+	
+	.index-banner-category.banner {
+		width: 100%;
+		padding: 0px;
+	}
+}
+
+.index-banner-category-title {
+	font-weight: 100;
+	color: #7C7C7C;
+}
+
+.top-title {
+	margin-top: 60px;
+	height: auto;
+}
+
+.title-gradient {
+	background: -webkit-linear-gradient(135deg,  rgb(246,139,255) 0%, rgb(113,194,255) 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+/*
+.banner {
+	width: 90%;
+	vertical-align: middle;
+	max-width: 700px;
+	margin: 20px auto 20px auto ;
+	text-align: center;
+	background-color: rgba(250,250,250,1.00);
+	color: #222222;
+	border-radius: 15px 15px 15px 15px;
+	box-shadow: 0px 10px 20px rgba(0, 0, 0, .4);
+	webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, .4);
+}
+*/
+.banner {
+	width: 90%;
+	vertical-align: middle;
+	max-width: 700px;
+	margin: 20px auto 20px auto ;
+	text-align: center;
+	background-color: #444444;
+	color: #FFFFFF;
+	border-radius: 15px 15px 15px 15px;
+	box-shadow: 0px 10px 20px rgba(0, 0, 0, .7);
+	webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, .7);
+}
+@media (prefers-color-scheme: dark), (prefers-color-scheme: light),(prefers-color-scheme: no-preference)
+{
+	.banner {
+		width: 90%;
+		vertical-align: middle;
+		max-width: 700px;
+		margin: 20px auto 20px auto ;
+		text-align: center;
+		background-color: #444444;
+		color: #FFFFFF;
+		border-radius: 15px 15px 15px 15px;
+		box-shadow: 0px 10px 20px rgba(0, 0, 0, .7);
+		webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, .7);
+	}
+}
+
+.daily-banner {
+	height: auto;
+	box-shadow: 0px 10px 20px rgba(0, 0, 0, .5);
+	padding-top: 50px;
+}
+
+.index-main-banner {
+	height: auto;
+	text-align: left;
+	padding-top: 50px;
+}
+
+.main-date {
+	background: -webkit-linear-gradient(135deg,  rgb(246,139,255) 0%, rgb(113,194,255) 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.cloudix-banner {
+	/* margin-top: 53px; */
+	height: auto;
+	color: #FFFFFF;
+	background: linear-gradient(135deg,  rgb(59,0,239) 0%, rgb(150,0,232) 100%);
+}
+
+.notification-banner {
+	/* margin-top: 53px; */
+	height: auto;
+	color: #FFFFFF;
+	background: linear-gradient(135deg,  rgb(255, 200, 200)  0%,  rgb(200, 20, 110) 100%);
+}
+
+.webapp-banner {
+	height: auto;
+	color: #111111;
+	background: linear-gradient(135deg,  rgb(255, 255, 255)  0%,  rgb(200, 200, 200) 100%);
+}
+
+.curation-banner {
+	height: auto;
+	 background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+     radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+	color: #FFFFFF;
+	text-shadow: -1px 0px 3px #000000;
+}
+
+.game-banner {
+	height: auto;
+	background: linear-gradient(135deg,  rgb(143,195,31) 0%, rgb(0,160,233) 100%);
+	background-size: auto;
+	color: #FFFFFF;
+	/* text-shadow: 0px 0px 3px #000000; */
+}
+
+.support-banner {
+	height: auto;
+	text-align: center;
+}
+
+.notimportant-banner{
+	height: auto;
+	color: #FFFFFF;
+	background: #000000;
+}
+
+/* CUSTOM/TABLES (2017.2.19) */
+.table-filling-banner {
+	padding: 0px 0px 0px 0px !important;
+}
+
+.banner-filling-table {
+	width: 100%;
+	overflow: hidden;
+	margin: 0;
+}
+
+.lang-table {
+	font-family: Nanum Square;
+	font-size: 20px;
+	font-weight: 400;
+	padding: 40px;
+	height: auto;
+	min-height: auto;
+}
+
+.info-index-table {
+	font-family: Nanum Square;
+	font-size: 20px;
+	font-weight: 400;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	height: auto;
+	min-height: auto;
+}
+
+.classroom-banner {
+   height: auto;
+   background: linear-gradient(286deg,  rgb(103, 52, 0) 0%, rgb(191, 131, 29) 100%);
+   background-size: auto;
+   color: #FFFFFF;
+   /* text-shadow: 0px 0px 3px #000000; */
+}
+
+/* OJ (2020.02.19) */
+/*.banner-inner-div {
+	width: 100%;
+	vertical-align: middle;
+	margin-top: 15px;
+	max-width: 700px;
+	text-align: center;
+	border-radius: 10px 10px 10px 10px;
+	border: 3px solid #CCCCCC;
+	
+}*/
+
+.banner-inner-div {
+	width: 100%;
+	vertical-align: middle;
+	margin-top: 15px;
+	max-width: 700px;
+	text-align: center;
+	border-radius: 10px 10px 10px 10px;
+	border: 3px solid #555555;
+}
+@media (prefers-color-scheme: dark), (prefers-color-scheme: light),(prefers-color-scheme: no-preference)
+{
+	.banner-inner-div {
+		width: 100%;
+		vertical-align: middle;
+		margin-top: 15px;
+		max-width: 700px;
+		text-align: center;
+		border-radius: 10px 10px 10px 10px;
+		border: 3px solid #555555;
+	}
+}
+
+.problem-main-bar {
+	width: 90%;
+	vertical-align: middle;
+	max-width: 700px;
+	margin: 10px auto 10px auto ;
+	text-align: center;
+	background-color: rgba(250,250,250,1.00);
+	color: #222222;
+	border-radius: 15px 15px 15px 15px;
+	box-shadow: 0px 10px 20px rgba(0, 0, 0, .4);
+	webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, .4);
+	background: linear-gradient(135deg,  rgb(246,139,255) 0%, rgb(113,194,255) 100%);
+}
+
+.problem-main-bar-button {
+	background-color: rgba(255,255,255,0.00);
+	height: auto;
+	width: auto;
+	font-weight: 600;
+	font-size: 20px;
+	color: #222222;
+	border-radius: 35px;
+	padding: 0px;
+	padding-left: 15px;
+	padding-right: 15px;
+	border: none;
+}
+
+/*mobile line br*/
+@media only screen and (min-width: 768px) {
+	.mobilebr{
+		display: none;
+	}
+	
+	.mobileNoDisplay{
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.desktopNoDisplay{
+		display: none;
+	}
+}

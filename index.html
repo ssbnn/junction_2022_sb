@@ -2,10 +2,89 @@
 <html>
     <head>
         <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#111111">
+<meta name= "description" content = "코딩도 하고 웹도 하고 그림도 그리는 인간, GGWArrior입니다">
+<!-- Shortcut Icon -->
+<link rel="shortcut icon" href="/favicon.ico">
+<!-- CSS StyleSheets -->
+<link href="/css/bootstrap.css" rel="stylesheet">
+<link href="/css/style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+<!-- JS -->
+<!-- JQuery / Bootstrap -->
+<script src="/js/jquery-1.11.3.min.js"></script>
+<!-- SPJA & Optimization code should go here -->
+<script>
+</script>
+<script src="/js/bootstrap.js"></script>
+<script src="/include/preload.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>		<link href="/today/todayStyle.css" rel="stylesheet" type="text/css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>Today | SADA</title>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-messaging.js"></script>
+        <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+        <script>
+            // Your web app's Firebase configuration
+            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+            var firebaseConfig = {
+                apiKey: "AIzaSyBEfGbjOzxpOv_fqvBRj3tu6y1F9PEmxM0",
+                authDomain: "sada-web-a803e.firebaseapp.com",
+                databaseURL: "https://sada-web-a803e.firebaseio.com",
+                projectId: "sada-web-a803e",
+                storageBucket: "sada-web-a803e.appspot.com",
+                messagingSenderId: "46252028401",
+                appId: "1:46252028401:web:c1bc22b072bba2aa241450",
+                measurementId: "G-VCYWVHY5V4"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            firebase.analytics();
+
+            const messaging = firebase.messaging();
+            /*messaging.requestPermission()
+            .then(function() {
+                console.log('Have permission');
+                return messaging.getToken();
+            })
+            .then(function(token){
+                console.log(token); //save to server to push messages!
+            })
+            .catch(function(err){
+                console.log('Error Occurred');
+            });
+
+            messaging.onMessage(function(payload){
+                console.log('onMessage: ', payload);
+            })*/
+        </script>
         <title> 장민준</title>
         </head>
-        <body style="background-color: antiquewhite;">
+        <body>
+            <header>
+                <div class="header-bar">
+                    <a data-toggle="collapse" class="header-menu-button" data-target="#menu-list-mobile"><img src="/img/header/menu.svg" alt="Menu" width="20" height="20" align="left"/></a>
+                    <a href="/index.php"><img src="/img/header/main.svg" alt="SADA" width="80" height="25"/></a>
+                    <script>console.log('218.157.183.244');</script><script>console.log('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36');</script><a href="/members/login.php"><img src="/img/header/login/login-false.svg" alt="Login" width="24" height="20" align="right"/></a>			<div id="ajax_response_script" style="display:none;">..</div>
+                </div>
+            </header>
             <h1 style="background-color:rgb(176, 176, 235)"> 장민준의 Github Page 연습</h1>
             <p>잘 나온다!</p>
+            <p> <strong>강한 글씨를 <u>밑줄과</u>  나타내 보세요</strong></p>
+            <p> <a href="https://ssbnn.github.io/junction_2022_sb/">하이퍼링크  </a></p>
+            <h1> 1. 웹사이트 구조</h1>
+            <h1> 2. 하이퍼링크 구현</h1>
+            <h1> 3. 나만의 사이트 만들기</h1>
+            <ul>
+                <li> <a href="1.html" style="color:red; text-decoration:underline;"> 첫 번째 링크</a></li>
+            </ul>
+            
         </body>
 </html>
